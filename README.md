@@ -1,7 +1,9 @@
-# Tauri + React + Typescript
+# Anthology
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Anthology's goal is to be an easy to use program that someone with little to no development knowledge can create a static website. This created website will focus on having "albums" that are pages with user's graphics that can have captions.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+# Technology
+ - Tauri
+ - React
+ - Typescript
+ - Rust
