@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
+import { Button, TextField, Tooltip, Typography } from "@mui/material";
 import "./App.css";
 
 function App() {
@@ -24,51 +25,52 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <h1>Anthology</h1>
+    <div>
+      <Typography variant="h1">Anthology</Typography>
 
-      <button
-        className="row"
+      <Tooltip title="Display present working directory">
+      <Button
         onClick={(e) => {
           e.preventDefault();
           pwdFn();
         }}
       >PWD
-      </button>
+      </Button>
+      </Tooltip>
 
-      <p>{pwd}</p>
+      <Typography variant="body1">{pwd}</Typography>
 
       <form
-        className="row"
         onSubmit={(e) => {
           e.preventDefault();
           newProject();
         }}
       >
-        <input
+        <TextField
           id="proj-input"
           onChange={(e) => setProject(e.currentTarget.value)}
           placeholder="Enter a name..."
+          label="New Project Name"
         />
-        <button type="submit">Create Project</button>
+        <Button type="submit">Create Project</Button>
       </form>
 
       <form
-        className="row"
         onSubmit={(e) => {
           e.preventDefault();
           newAlbum();
         }}
       >
-        <input
+        <TextField
           id="album-input"
           onChange={(e) => setAlbum(e.currentTarget.value)}
           placeholder="Enter a name..."
+          label="New Album Name"
         />
-        <button type="submit">Create Album</button>
+        <Button type="submit">Create Album</Button>
       </form>
 
-      <p>{dir}</p>
+      <Typography variant="body1">{dir}</Typography>
 
     </div>
   );
