@@ -11,6 +11,9 @@
   },
   "tauri": {
     "allowlist": {
+      "window": {
+        "all": true
+      },
       "all": false,
       "shell": {
         "all": false,
@@ -34,6 +37,7 @@
     },
     "windows": [
       {
+        "decorations": false,
         "fullscreen": false,
         "resizable": true,
         "title": "Anthology",

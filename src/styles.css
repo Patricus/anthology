@@ -2,3 +2,24 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
+/* PLACE HOLDER */
+/* TODO implement css below into MaterialUI */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #0b1210;
+    --background: #f8fbfa;
+    --primary: #6fa6a1;
+    --secondary: #a9bdca;
+    --accent: #8496b3;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ecf3f1;
+    --background: #040606;
+    --primary: #59918d;
+    --secondary: #344855;
+    --accent: #4c5e7b;
+  }
+}
