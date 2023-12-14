@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
-import { Button, TextField, Tooltip, Typography } from "@mui/material";
+import { Box, Button, TextField, Tooltip, Typography } from "@mui/material";
 import "./App.css";
+import Settings from "./features/settings";
+import { useTheme } from "./components/themeContext";
 
 function App() {
   const [pwd, setPwd] = useState("");
@@ -9,6 +11,7 @@ function App() {
   const [album, setAlbum] = useState("");
   const [dir, setDir] = useState("");
 
+  const { darkMode } = useTheme();
   // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 
   async function pwdFn() {
@@ -25,7 +28,7 @@ function App() {
   }
 
   return (
-    <div>
+    <Box bgcolor={"background.default"}>
       <Typography variant="h1">Anthology</Typography>
 
       <Tooltip title="Display present working directory">
@@ -72,7 +75,9 @@ function App() {
 
       <Typography variant="body1">{dir}</Typography>
 
-    </div>
+      <Settings />
+
+    </Box>
   );
 }
 

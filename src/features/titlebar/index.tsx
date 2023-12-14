@@ -9,7 +9,7 @@ export default function Titlebar() {
             <AppBar data-tauri-drag-region position="static" sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                bgcolor: "cornflowerblue",
+                bgcolor: "slategrey",
             }}>
                 <RightButtons />
             </AppBar>
